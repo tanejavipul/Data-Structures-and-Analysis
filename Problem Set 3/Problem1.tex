@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{CSC263: Problem Set 3}
+\date{October 8, 2019}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \begin{figure}[htp]
+    \centering
+    \includegraphics[width=13cm]{HBalancedTree.png}
+    \caption{Height balanced tree that is not ideally height balanced.}
+    \label{fig:tree}
+\end{figure}
+
+This is an example of a height balanced tree that is not ideally height balanced. By definition an ideally height balanced tree has every leaf at depth $h$ or $h-1$, and every node of depth less than $h-1$, has 2 children, and clearly Node C has only 1 child, Node G. Note that in this case, the tree in figure 1 has a height of 4 (assuming the root has a height of 1), and Node F has a depth of 4. Node C is at a depth of 2 which is less than $h - 1 = 4 - 1 = 3$. 
+
+However, this tree is height balanced. This is because for every node the height of the left subtree is within $\pm 1$ of the height of the right subtree. To see that this is true for each node, we use balance factors. Balance Factor = $h(R) - h(L)$, where $h(R)$ and $h(L)$ stands for height of right subtree and height of left subtree respectively. Thus, if the balance factor is one of $-1$, $0$, $1$, then the tree is height balanced. As all balance factors in figure 1 are either $-1$, $0$, or $1$, the tree is height balanced.
+
+\end{enumerate}
+
+\end{document}
